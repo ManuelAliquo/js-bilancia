@@ -56,5 +56,16 @@ if (task === "min") {
   alert("Peso minimo: " + pesoMin);
 }
 
-//
 // numero di giocattoli
+if (task === "num") {
+  let numGiocattoli = 0;
+
+  for (let i = 0; i < pesiBase.length; i++) {
+    let pesoCorrente = pesiBase[i];
+    if (pesoCorrente > 0) {
+      numGiocattoli++;
+    }
+  }
+  console.log("Numero giocattoli: " + numGiocattoli);
+  alert("Numero giocattoli: " + numGiocattoli);
+}
