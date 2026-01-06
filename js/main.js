@@ -19,7 +19,20 @@ if (task === "media") {
 }
 
 // peso massimo
+if (task === "max") {
+  let pesoMax = 0;
 
+  for (let i = 0; i < pesiBase.length; i++) {
+    if (pesiBase[i] > pesoMax) {
+      pesoMax = pesiBase[i];
+    }
+  }
+  console.log("Peso massimo: " + pesoMax);
+  alert("Peso massimo: " + pesoMax);
+}
+
+//
+//
 // peso minimo
 
 // numero di giocattoli
