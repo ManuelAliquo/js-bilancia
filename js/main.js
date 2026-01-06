@@ -4,7 +4,9 @@ console.table(pesiBase);
 // chiedo all'utente quale valore vuole conoscere
 let task = prompt(`chiedi tra: "media", "max", "min", "num"`);
 
-// peso medio
+// elaborazioni richieste
+let output;
+
 if (task === "media") {
   let sommaPesi = 0;
 
@@ -14,12 +16,10 @@ if (task === "media") {
   }
 
   let mediaPesi = sommaPesi / pesiBase.length;
-  console.log("Peso medio: " + mediaPesi);
-  alert("Peso medio: " + mediaPesi);
-}
 
-// peso massimo
-if (task === "max") {
+  output = `Peso medio: ${mediaPesi}`;
+  alert("Peso medio: " + mediaPesi);
+} else if (task === "max") {
   let pesoMax = 0;
 
   for (let i = 0; i < pesiBase.length; i++) {
@@ -28,12 +28,10 @@ if (task === "max") {
       pesoMax = pesoCorrente;
     }
   }
-  console.log("Peso massimo: " + pesoMax);
-  alert("Peso massimo: " + pesoMax);
-}
 
-// peso minimo
-if (task === "min") {
+  output = `Peso massimo: ${pesoMax}`;
+  alert("Peso massimo: " + pesoMax);
+} else if (task === "min") {
   let pesoMax = 0;
 
   for (let i = 0; i < pesiBase.length; i++) {
@@ -52,12 +50,10 @@ if (task === "min") {
       pesoMin = pesoCorrente;
     }
   }
-  console.log("Peso minimo: " + pesoMin);
-  alert("Peso minimo: " + pesoMin);
-}
 
-// numero di giocattoli
-if (task === "num") {
+  output = `Peso minimo: ${pesoMin}`;
+  alert("Peso minimo: " + pesoMin);
+} else if (task === "num") {
   let numGiocattoli = 0;
 
   for (let i = 0; i < pesiBase.length; i++) {
@@ -66,6 +62,10 @@ if (task === "num") {
       numGiocattoli++;
     }
   }
-  console.log("Numero giocattoli: " + numGiocattoli);
+
+  output = `Numero giocattoli: ${numGiocattoli}`;
   alert("Numero giocattoli: " + numGiocattoli);
 }
+
+//output
+console.log(output);
