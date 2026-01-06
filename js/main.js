@@ -23,16 +23,38 @@ if (task === "max") {
   let pesoMax = 0;
 
   for (let i = 0; i < pesiBase.length; i++) {
-    if (pesiBase[i] > pesoMax) {
-      pesoMax = pesiBase[i];
+    let pesoCorrente = pesiBase[i];
+    if (pesoCorrente > pesoMax) {
+      pesoMax = pesoCorrente;
     }
   }
   console.log("Peso massimo: " + pesoMax);
   alert("Peso massimo: " + pesoMax);
 }
 
-//
-//
 // peso minimo
+if (task === "min") {
+  let pesoMax = 0;
 
+  for (let i = 0; i < pesiBase.length; i++) {
+    let pesoCorrente = pesiBase[i];
+    if (pesoCorrente > pesoMax) {
+      pesoMax = pesoCorrente;
+    }
+  }
+
+  let pesoMin = pesoMax;
+
+  for (let i = 0; i < pesiBase.length; i++) {
+    let pesoCorrente = pesiBase[i];
+
+    if (pesoCorrente < pesoMin) {
+      pesoMin = pesoCorrente;
+    }
+  }
+  console.log("Peso minimo: " + pesoMin);
+  alert("Peso minimo: " + pesoMin);
+}
+
+//
 // numero di giocattoli
